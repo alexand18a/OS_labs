@@ -96,6 +96,9 @@
       <AdditionalLibraryDirectories>D:\visual studio\оси\NumberLibrary\Debug;D:\visual studio\оси\VectorLibrary\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>VectorLibrary.lib;NumberLibrary.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y /d "D:\visual studio\оси\VectorLibrary\Debug\VectorLibrary.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
